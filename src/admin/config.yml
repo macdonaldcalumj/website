@@ -6,6 +6,13 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "technologies"
+    label: "Technologies"
+    folder: "technologies"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
   - name: "posts"
     label: "Posts"
     folder: "posts"
