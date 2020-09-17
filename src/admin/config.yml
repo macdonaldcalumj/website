@@ -10,9 +10,28 @@ collections:
     label: "Technologies"
     folder: "technologies"
     create: true
+    identifier_field: "name"
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Date", name: "date", widget: "string"}
+      - label: "Technologies"
+        name: "technologies"
+        widget: "relation"
+        multiple: true
+        collection: "technologies"
+        searchFields: ["name"]
+        displayFields: ["name"]
+        valueField: "name"
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
     folder: "posts"
