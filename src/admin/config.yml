@@ -28,9 +28,9 @@ collections:
         widget: "relation"
         multiple: true
         collection: "technologies"
-        searchFields: ["name"]
-        displayFields: ["name"]
-        valueField: "name"
+        search_fields: ["name"]
+        display_fields: ["name"]
+        value_field: "name"
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
