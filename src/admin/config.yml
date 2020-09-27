@@ -25,14 +25,13 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Date", name: "date", widget: "string"}
-      - label: "Technologies"
-        name: "technologies"
+      - label: "Technology"
+        name: "technology"
         widget: "relation"
-        multiple: true
         collection: "technologies"
         search_fields: ["name"]
         display_fields: ["name"]
-        value_field: "name"
+        value_field: "id"
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
