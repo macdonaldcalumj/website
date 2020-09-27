@@ -8,18 +8,20 @@ public_folder: "/uploads"
 collections:
   - name: "technologies"
     label: "Technologies"
-    folder: "technologies"
+    folder: "content/technologies"
     create: true
     identifier_field: "name"
     fields:
+      - {label: "ID", name: "id", widget: "id"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
   - name: "projects"
     label: "Projects"
-    folder: "projects"
+    folder: "content/projects"
     create: true
     slug: "{{slug}}"
     fields:
+      - {label: "ID", name: "id", widget: "id"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Date", name: "date", widget: "string"}
@@ -34,7 +36,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:

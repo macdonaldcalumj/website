@@ -1,58 +1,59 @@
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: "Gridsome",
   transformers: {
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      anchorClassName: "icon icon-link",
       plugins: [
         // ...global plugins
-      ]
-    }
+      ],
+    },
   },
 
   plugins: [
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'posts/**/*.md',
-        typeName: 'Post',
+        path: "content/posts/**/*.md",
+        typeName: "Post",
         remark: {
           plugins: [
             // ...local plugins
-          ]
-        }
-      }
+          ],
+        },
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'technologies/**/*.md',
-        typeName: 'Technology',
+        path: "content/technologies/**/*.md",
+        typeName: "Technology",
         remark: {
           plugins: [
             // ...local plugins
-          ]
-        }
-      }
+          ],
+        },
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'projects/**/*.md',
-        typeName: 'Project',
+        path: "content/projects/**/*.md",
+        typeName: "Project",
         remark: {
           plugins: [
             // ...local plugins
-          ]
-        }
-      }
+          ],
+        },
+      },
     },
     {
-      use: `gridsome-plugin-netlify-cms`,
+      use: "gridsome-plugin-netlify-cms",
       options: {
-        publicPath: `/admin`
-      }
+        publicPath: "/admin",
+        modulePath: "src/admin/index.js",
+      },
     },
-  ]
-}
+  ],
+};
