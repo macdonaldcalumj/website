@@ -46,6 +46,9 @@ module.exports = {
             // ...local plugins
           ],
         },
+        refs: {
+          technologies: 'Technology',
+        }
       },
     },
     {
