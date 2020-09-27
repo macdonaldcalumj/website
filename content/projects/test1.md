@@ -4,7 +4,7 @@ title: Test1
 excerpt: Hello
 date: September 2020
 technologies:
-  - Test1
-  - Test2
+  - 174cfdbeb09
+  - 174cfdc39f8
 ---
 Hello world!
