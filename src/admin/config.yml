@@ -19,6 +19,7 @@ collections:
     label: "Projects"
     folder: "content/projects"
     create: true
+    identifier_field: "title"
     slug: "{{slug}}"
     fields:
       - {label: "ID", name: "id", widget: "id"}
@@ -38,10 +39,12 @@ collections:
     label: "Employment"
     folder: "content/employment"
     create: true
+    identifier_field: "name"
     slug: "{{slug}}"
     fields:
       - {label: "ID", name: "id", widget: "id"}
       - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string"}
       - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
       - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
