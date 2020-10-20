@@ -11,11 +11,11 @@
     </p>
 
     <div class="container">
-      <h1>List projects</h1>
-      <div v-for="project in $page.projects.edges" :key="project.id" class="projects d-flex">
+      <h1>List employment</h1>
+      <div v-for="employment in $page.employment.edges" :key="employment.id" class="projects d-flex">
         <div class="article__body">
-          <g-link :to="project.node.path" class="article__link">
-            <h1 class="article__title">{{project.node.title}}</h1>
+          <g-link :to="employment.node.path" class="article__link">
+            <h1 class="article__title">{{employment.node.title}}</h1>
           </g-link>
         </div>
       </div>
@@ -32,6 +32,14 @@
 <page-query>
 query {
   projects: allProject {
+    edges {
+      node {
+        title
+        path
+      }
+    }
+  },
+  employment: allEmployment {
     edges {
       node {
         title

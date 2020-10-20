@@ -75,6 +75,7 @@ module.exports = {
     },
   ],
   templates: {
-    Project: "/:title",
+    Employment: "/employment/:title",
+    Project: "/projects/:title",
   },
 };
