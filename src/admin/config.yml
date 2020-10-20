@@ -34,6 +34,25 @@ collections:
         display_fields: ["name"]
         value_field: "id"
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "employment"
+    label: "Employment"
+    folder: "content/employment"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "id"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
+      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Projects"
+        name: "projects"
+        widget: "relation"
+        multiple: true
+        collection: "projects"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "id"
   - name: "posts"
     label: "Posts"
     folder: "content/posts"
