@@ -10,6 +10,17 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
     </p>
 
+    <div class="container">
+      <h1>List projects</h1>
+      <div v-for="project in $page.projects.edges" :key="project.id" class="projects d-flex">
+        <div class="article__body">
+          <g-link :to="project.node.path" class="article__link">
+            <h1 class="article__title">{{project.node.title}}</h1>
+          </g-link>
+        </div>
+      </div>
+    </div>
+
     <p class="home-links">
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
@@ -17,6 +28,19 @@
 
   </Layout>
 </template>
+
+<page-query>
+query {
+  projects: allProject {
+    edges {
+      node {
+        title
+        path
+      }
+    }
+  }
+}
+</page-query>
 
 <script>
 export default {

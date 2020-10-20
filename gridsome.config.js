@@ -47,8 +47,8 @@ module.exports = {
           ],
         },
         refs: {
-          technologies: 'Technology',
-        }
+          technologies: "Technology",
+        },
       },
     },
     {
@@ -59,4 +59,7 @@ module.exports = {
       },
     },
   ],
+  templates: {
+    Project: "/:title",
+  },
 };
