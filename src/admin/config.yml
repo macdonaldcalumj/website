@@ -17,6 +17,7 @@ collections:
           - label: "Education"
             name: "education"
             widget: "relation"
+            required: false
             multiple: true
             collection: "education"
             search_fields: ["title"]
@@ -25,6 +26,7 @@ collections:
           - label: "Employment"
             name: "employment"
             widget: "relation"
+            required: false
             multiple: true
             collection: "employment"
             search_fields: ["title"]
@@ -53,6 +55,7 @@ collections:
       - label: "Technologies"
         name: "technologies"
         widget: "relation"
+        required: false
         multiple: true
         collection: "technologies"
         search_fields: ["name"]
@@ -70,11 +73,12 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Role", name: "role", widget: "string"}
       - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
-      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
+      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: "", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Projects"
         name: "projects"
         widget: "relation"
+        required: false
         multiple: true
         collection: "projects"
         search_fields: ["title"]
@@ -91,11 +95,12 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Institute", name: "institute", widget: "string"}
       - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
-      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
+      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: "", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - label: "Projects"
         name: "projects"
         widget: "relation"
+        required: false
         multiple: true
         collection: "projects"
         search_fields: ["title"]
