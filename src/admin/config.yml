@@ -6,6 +6,14 @@ media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "index"
+        label: "Home Page"
+        file: "content/index.json"
+        fields:
+          - {label: "Intro", name: "intro", widget: "markdown"}
   - name: "technologies"
     label: "Technologies"
     folder: "content/technologies"
