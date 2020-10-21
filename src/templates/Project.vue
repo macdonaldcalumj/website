@@ -4,7 +4,7 @@
     <div>{{$page.project.date}}</div>
     <div v-for="technology in $page.project.technologies" :key=technology.id>
       {{technology.name}}
-      <img :src=technology.image />
+      <g-image :alt=technology.name :src=technology.image />
     </div>
     <div v-html="$page.project.content"/>
   </Layout>
@@ -27,7 +27,11 @@ query ($id: ID!) {
 
 <script>
 export default {
-
+  metaInfo() {
+    return {
+      title: this.$page.project.title
+    }
+  }
 }
 </script>
 

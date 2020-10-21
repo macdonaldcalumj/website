@@ -37,7 +37,11 @@ query ($id: ID!) {
 
 <script>
 export default {
-
+  metaInfo() {
+    return {
+      title: this.$page.employment.title
+    }
+  }
 }
 </script>
 
