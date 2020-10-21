@@ -14,6 +14,14 @@ collections:
         file: "content/index.json"
         fields:
           - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Employment"
+            name: "employment"
+            widget: "relation"
+            multiple: true
+            collection: "employment"
+            search_fields: ["title"]
+            display_fields: ["title"]
+            value_field: "id"
   - name: "technologies"
     label: "Technologies"
     folder: "content/technologies"
