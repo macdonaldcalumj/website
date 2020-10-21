@@ -30,7 +30,7 @@
 </template>
 
 <page-query>
-query {
+query($id: ID!) {
   projects: allProject {
     edges {
       node {
@@ -46,6 +46,9 @@ query {
         path
       }
     }
+  }
+  homePage(id: $id) {
+    intro
   }
 }
 </page-query>
