@@ -1,20 +1,30 @@
 module.exports = {
-  parser: "vue-eslint-parser",
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
+  root: true,
   env: {
-    browser: true,
-    es6: true
+    node: true,
   },
-  plugins: ["gridsome"],
+  extends: [
+    'plugin:vue/essential',
+    'plugin:prettier/recommended',
+    '@vue/prettier',
+    'plugin:gridsome/recommended',
+  ],
   rules: {
-    "gridsome/format-query-block": "warn",
-    "gridsome/require-g-image-src": "error",
-    "gridsome/require-g-link-to": "warn"
-  }
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+  },
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };
