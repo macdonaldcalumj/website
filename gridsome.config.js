@@ -55,6 +55,21 @@ module.exports = {
       },
     },
     {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/education/**/*.md",
+        typeName: "Education",
+        remark: {
+          plugins: [
+            // ...local plugins
+          ],
+        },
+        refs: {
+          projects: "Project",
+        },
+      },
+    },
+    {
       use: "gridsome-plugin-netlify-cms",
       options: {
         publicPath: "/admin",
@@ -63,6 +78,7 @@ module.exports = {
     },
   ],
   templates: {
+    Education: "/education/:title",
     Employment: "/employment/:title",
     HomePage: "/",
     Project: "/projects/:title",

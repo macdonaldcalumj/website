@@ -11,11 +11,11 @@
     </p>
 
     <div class="container">
-      <h1>List employment</h1>
-      <div v-for="employment in $page.employment.edges" :key="employment.id" class="projects d-flex">
+      <h1>List education</h1>
+      <div v-for="education in $page.education.edges" :key="education.id" class="projects d-flex">
         <div class="article__body">
-          <g-link :to="employment.node.path" class="article__link">
-            <h1 class="article__title">{{employment.node.title}}</h1>
+          <g-link :to="education.node.path" class="article__link">
+            <h1 class="article__title">{{education.node.title}}</h1>
           </g-link>
         </div>
       </div>
@@ -40,6 +40,14 @@ query($id: ID!) {
     }
   },
   employment: allEmployment {
+    edges {
+      node {
+        title
+        path
+      }
+    }
+  }
+  education: allEducation {
     edges {
       node {
         title
