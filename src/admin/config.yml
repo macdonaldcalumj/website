@@ -47,12 +47,33 @@ collections:
     label: "Employment"
     folder: "content/employment"
     create: true
-    identifier_field: "name"
+    identifier_field: "title"
     slug: "{{slug}}"
     fields:
       - {label: "ID", name: "id", widget: "id"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Role", name: "role", widget: "string"}
+      - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
+      - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Projects"
+        name: "projects"
+        widget: "relation"
+        multiple: true
+        collection: "projects"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "id"
+  - name: "education"
+    label: "Education"
+    folder: "content/education"
+    create: true
+    identifier_field: "title"
+    slug: "{{slug}}"
+    fields:
+      - {label: "ID", name: "id", widget: "id"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Institute", name: "institute", widget: "string"}
       - {label: "Start Date", name: "start-date", widget: "date", format: "MMM YYYY"}
       - {label: "End Date", name: "end-date", widget: "date", format: "MMM YYYY", default: ""}
       - {label: "Body", name: "body", widget: "markdown"}
