@@ -5,7 +5,7 @@
     <div>{{ $page.education.start_date }} - {{ $page.education.end_date }}</div>
     <div v-html="$page.education.content" />
     <div v-for="project in $page.education.projects" :key="project.id">
-      <g-link :to="project.path" class="article__link">
+      <g-link :to="project.path">
         {{ project.title }}
       </g-link>
     </div>

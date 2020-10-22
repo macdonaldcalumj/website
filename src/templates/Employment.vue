@@ -7,7 +7,7 @@
     </div>
     <div v-html="$page.employment.content" />
     <div v-for="project in $page.employment.projects" :key="project.id">
-      <g-link :to="project.path" class="article__link">
+      <g-link :to="project.path">
         {{ project.title }}
       </g-link>
     </div>
