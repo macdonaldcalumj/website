@@ -13,6 +13,9 @@ module.exports = {
 
   plugins: [
     {
+      use: 'gridsome-plugin-tailwindcss',
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/technologies/**/*.md',
