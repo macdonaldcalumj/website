@@ -17,7 +17,7 @@ query {
 }
 </static-query>
 
-<style scoped>
+<style>
 /*
   Fonts wouldn't load in tailwind.config.js, so load them here
 */
@@ -41,6 +41,10 @@ h2 {
 
 header {
   min-height: 4.5rem;
+}
+
+p {
+  padding-top: 1.5rem;
 }
 
 .content {

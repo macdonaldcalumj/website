@@ -5,11 +5,16 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const marked = require('marked');
+
 module.exports = function (api) {
   api.loadSource(({ addCollection, store }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
 
     let homePage = require('./content/index.json');
+
+    // Parse Markdown into HTML
+    homePage.intro = marked(homePage.intro);
 
     // The JSON file only stores the IDs, actual references need created here.
     let allEducation = [];
