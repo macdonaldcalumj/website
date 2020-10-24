@@ -1,14 +1,10 @@
 <template>
   <Layout>
     <h1>{{ $page.project.title }}</h1>
+    <div>{{ $page.project.date }}</div>
     <g-image class="main-image" :src="$page.project.image" />
-    <div>Date: {{ $page.project.date }}</div>
     <div>Technologies:</div>
-    <div
-      class="tech-container"
-      v-for="technology in $page.project.technologies"
-      :key="technology.id"
-    >
+    <div v-for="technology in $page.project.technologies" :key="technology.id">
       <TechnologyDisplay :technology="technology" />
     </div>
     <div v-html="$page.project.content" />
@@ -60,7 +56,8 @@ export default {
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  line-height: 4.5rem;
+  /* line-height: 4.5rem; */
+  margin-top: 1.5rem;
 }
 
 .extra-image {
@@ -74,10 +71,6 @@ h1 {
 
 .main-image {
   height: 15rem;
-  margin-bottom: 1.5rem;
-}
-
-.tech-container {
-  margin-left: 5rem;
+  margin: 1.5rem 0;
 }
 </style>
