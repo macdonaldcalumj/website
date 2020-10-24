@@ -50,7 +50,7 @@ collections:
     fields:
       - {label: "ID", name: "id", widget: "id"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Date", name: "date", widget: "date", format: "MMM YYYY"}
       - label: "Technologies"
         name: "technologies"
@@ -62,6 +62,11 @@ collections:
         display_fields: ["name"]
         value_field: "id"
       - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Extra Image"
+        name: "extraImages"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: "Image", name: "image", widget: "image", required: false}
   - name: "employment"
     label: "Employment"
     folder: "content/employment"
