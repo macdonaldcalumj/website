@@ -1,9 +1,11 @@
 <template>
   <div class="main-container">
-    <header>
-      <g-link class="title" to="/">{{ $static.metadata.siteName }}</g-link>
-    </header>
-    <slot />
+    <div class="content">
+      <header>
+        <g-link class="title" to="/">{{ $static.metadata.siteName }}</g-link>
+      </header>
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -31,13 +33,32 @@ query {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 4.5rem;
+}
+
 header {
-  height: 4.5rem;
+  min-height: 4.5rem;
+}
+
+.content {
+  margin: auto;
+  max-width: 800px;
+  width: 85vw;
 }
 
 .main-container {
-  margin: auto;
-  max-width: 80vw;
+  background-image: repeating-linear-gradient(
+    white,
+    white calc(1.5rem - 1px),
+    steelblue 1.5rem
+  );
+  font-family: Journal;
+  font-size: 1.75rem;
+  line-height: 1.5rem;
+  min-height: 100vh;
 }
 
 .title {
