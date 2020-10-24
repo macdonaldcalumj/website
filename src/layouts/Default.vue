@@ -104,7 +104,7 @@ p {
 
 @responsive {
   .links-md {
-    justify-content: right;
+    justify-content: flex-end;
   }
 }
 </style>
