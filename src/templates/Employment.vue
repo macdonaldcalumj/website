@@ -6,9 +6,10 @@
       {{ $page.employment.start_date }} - {{ $page.employment.end_date }}
     </div>
     <div v-html="$page.employment.content" />
+    <h3>Projects:</h3>
     <div v-for="project in $page.employment.projects" :key="project.id">
       <g-link :to="project.path">
-        {{ project.title }}
+        <Polaroid :image="project.image" :title="project.title" />
       </g-link>
     </div>
   </Layout>
@@ -26,19 +27,19 @@ query($id: ID!) {
       id
       path
       title
-      date
-      technologies {
-        id
-        name
-        image
-      }
+      image
     }
   }
 }
 </page-query>
 
 <script>
+import Polaroid from '@/components/Polaroid.vue';
+
 export default {
+  components: {
+    Polaroid,
+  },
   metaInfo() {
     return {
       title: this.$page.employment.title,
@@ -47,4 +48,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+}
+</style>

@@ -4,6 +4,9 @@
     :style="`transform: rotate(` + rotation + `deg)`"
   >
     <g-image class="image" :src="image" />
+    <div class="text">
+      {{ title }}
+    </div>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ export default {
   },
   props: {
     image: String,
+    title: String,
   },
 };
 </script>
@@ -38,6 +42,14 @@ export default {
   margin: auto;
   padding-top: 7%;
   width: 88%;
+}
+
+.text {
+  align-items: center;
+  display: flex;
+  height: 21%;
+  justify-content: center;
+  width: 100%;
 }
 
 @responsive {
