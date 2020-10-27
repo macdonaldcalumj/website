@@ -4,8 +4,14 @@
     <div>{{ $page.project.date }}</div>
     <Polaroid :image="$page.project.image" />
     <div>Technologies:</div>
-    <div v-for="technology in $page.project.technologies" :key="technology.id">
-      <TechnologyDisplay :technology="technology" />
+    <div class="grid grid-cols-4">
+      <div
+        v-for="technology in $page.project.technologies"
+        :key="technology.id"
+        class="col-span-2 md:col-span-1"
+      >
+        <TechnologyDisplay :technology="technology" />
+      </div>
     </div>
     <div v-html="$page.project.content" />
     <div class="grid grid-cols-2">
