@@ -6,6 +6,7 @@ date: Jun 2019
 technologies:
   - 1755cc329f6
   - 1755cc39d81
+  - 1756b5b15e1
   - 1755cc2a9bf
 extraImages:
   - /uploads/barclaycard-sensorium-2.jpg
