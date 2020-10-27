@@ -8,6 +8,7 @@ projects:
   - 1756b2bb246
   - 1756b7814a5
   - 1756ba1ea72
+  - 1756c08ce5d
 ---
 Say Fromage is a company specialising in experiential video/photographic content for events of all sizes, ranging from photo booths at birthday parties to worldwide promotions for some of the biggest brands in the world.  The software I worked on there was used by the likes of Adidas, Burberry, Disney, Google, PlayStation, Spotify, Vogue and more.
 
