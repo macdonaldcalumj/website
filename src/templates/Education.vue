@@ -4,10 +4,19 @@
     <div>{{ $page.education.institute }}</div>
     <div>{{ $page.education.start_date }} - {{ $page.education.end_date }}</div>
     <div v-html="$page.education.content" />
-    <div v-for="project in $page.education.projects" :key="project.id">
-      <g-link :to="project.path">
-        {{ project.title }}
-      </g-link>
+    <div v-if="$page.education.projects">
+      <h3>Projects:</h3>
+      <div class="grid grid-cols-2">
+        <div
+          class="col-span-2 md:col-span-1"
+          v-for="project in $page.education.projects"
+          :key="project.id"
+        >
+          <g-link :to="project.path">
+            <Polaroid :image="project.image" :title="project.title" />
+          </g-link>
+        </div>
+      </div>
     </div>
   </Layout>
 </template>
@@ -24,19 +33,19 @@ query($id: ID!) {
       id
       path
       title
-      date
-      technologies {
-        id
-        name
-        image
-      }
+      image
     }
   }
 }
 </page-query>
 
 <script>
+import Polaroid from '@/components/Polaroid.vue';
+
 export default {
+  components: {
+    Polaroid,
+  },
   metaInfo() {
     return {
       title: this.$page.education.title,
@@ -45,4 +54,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+}
+</style>
