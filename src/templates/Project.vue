@@ -2,7 +2,7 @@
   <Layout>
     <h1>{{ $page.project.title }}</h1>
     <div>{{ $page.project.date }}</div>
-    <g-image class="main-image" :src="$page.project.image" />
+    <Polaroid :image="$page.project.image" />
     <div>Technologies:</div>
     <div v-for="technology in $page.project.technologies" :key="technology.id">
       <TechnologyDisplay :technology="technology" />
@@ -14,7 +14,7 @@
         v-for="image in $page.project.extraImages"
         :key="image.id"
       >
-        <g-image class="extra-image" :src="image" />
+        <Polaroid :image="image" />
       </div>
     </div>
   </Layout>
@@ -38,10 +38,12 @@ query($id: ID!) {
 </page-query>
 
 <script>
+import Polaroid from '@/components/Polaroid.vue';
 import TechnologyDisplay from '@/components/TechnologyDisplay.vue';
 
 export default {
   components: {
+    Polaroid,
     TechnologyDisplay,
   },
   metaInfo() {
@@ -56,21 +58,6 @@ export default {
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  /* line-height: 4.5rem; */
   margin-top: 1.5rem;
-}
-
-.extra-image {
-  margin: auto;
-  width: 80%;
-}
-
-.extra-image-container {
-  margin: 1.5rem 0;
-}
-
-.main-image {
-  height: 15rem;
-  margin: 1.5rem 0;
 }
 </style>
