@@ -7,10 +7,16 @@
     </div>
     <div v-html="$page.employment.content" />
     <h3>Projects:</h3>
-    <div v-for="project in $page.employment.projects" :key="project.id">
-      <g-link :to="project.path">
-        <Polaroid :image="project.image" :title="project.title" />
-      </g-link>
+    <div class="grid grid-cols-2">
+      <div
+        class="extra-image-container col-span-2 md:col-span-1"
+        v-for="project in $page.employment.projects"
+        :key="project.id"
+      >
+        <g-link :to="project.path">
+          <Polaroid :image="project.image" :title="project.title" />
+        </g-link>
+      </div>
     </div>
   </Layout>
 </template>
