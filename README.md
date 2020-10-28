@@ -1,14 +1,15 @@
-# Default starter for Gridsome
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f6f8a7f2-388a-42c9-b6ce-677ed4fc1e9f/deploy-status)](https://app.netlify.com/sites/brave-bassi-f1d973/deploys)
 
-This is the project you get when you run `gridsome create new-project`.
+# Website
 
-### 1. Install Gridsome CLI tool if you don't have
+This is my portfolio website, available at https://calumjmacdonald.com.
 
-`npm install --global @gridsome/cli`
+It is build with [Gridsome](https://gridsome.org/) and [NetlifyCMS](https://www.netlifycms.org/).
 
-### 2. Create a Gridsome project
+To develop clone this repository, enter the directory and run `yarn` to install required packages.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+Run:
+* `yarn develop` to run locally.
+* `yarn build` to build
+* `yarn explore` to view GraphQL data
+* `yarn lint` to run ESLint
