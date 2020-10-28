@@ -4,7 +4,7 @@
 
 This is my portfolio website, available at https://calumjmacdonald.com.
 
-It is build with [Gridsome](https://gridsome.org/) and [NetlifyCMS](https://www.netlifycms.org/).
+It is built with [Gridsome](https://gridsome.org/) and [NetlifyCMS](https://www.netlifycms.org/).
 
 To develop clone this repository, enter the directory and run `yarn` to install required packages.
 
@@ -13,3 +13,5 @@ Run:
 * `yarn build` to build
 * `yarn explore` to view GraphQL data
 * `yarn lint` to run ESLint
+
+The font is from [Fontourist](https://www.fontourist.com/fonts/journal).
