@@ -68,6 +68,10 @@ p {
   padding-top: 1.5rem;
 }
 
+ul li:before {
+  content: '\002D \0020';
+}
+
 .content {
   margin: auto;
   max-width: 800px;
