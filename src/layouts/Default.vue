@@ -48,7 +48,7 @@ query {
 }
 
 @font-face {
-  font-family: 'Castledown';
+  font-family: 'Journal';
   src: url('/fonts/Journal-Bold.otf');
   font-weight: bold;
 }
